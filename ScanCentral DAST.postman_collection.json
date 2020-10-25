@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "2f26b02d-2b88-4d28-8a85-ee145fec497f",
+		"name": "ScanCentral DAST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start a scan using the start-scan-cicd endpoint",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "FORTIFYTOKEN MmI1NDRkNGQtYTI2My00YzE4LWI5MjItODRjZDQzMGZmOGFi"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cicdToken\":\"08a14bc9-0959-4a42-939b-d5736a280559\",\r\n\"name\":\"PostmanInitiatedScan\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://10.0.2.5:8500/api/scans/start-scan-cicd",
+					"protocol": "https",
+					"host": [
+						"10",
+						"0",
+						"2",
+						"5"
+					],
+					"port": "8500",
+					"path": [
+						"api",
+						"scans",
+						"start-scan-cicd"
+					]
+				},
+				"description": "This request starts a scan using the start-scan-cicd endpoint.\r\n\r\nRequirements:\r\n1. Navigate to SSC | Administration | Users | Token Management, and create a CIToken to be used for authorization\r\n2. Navigate to SSC | ScanCentral | DAST | Settings List, to retrieve the settings identifier (cicdToken) which identifies the scan config\r\n3. Supply option overrides for sensor and scan name"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
