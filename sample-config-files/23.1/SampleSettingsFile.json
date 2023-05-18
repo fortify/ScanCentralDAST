@@ -1,0 +1,96 @@
+﻿{
+  "DatabaseSettings": {
+    "DatabaseProvider": "SQLServer",
+    "Server": "MyServer",
+    "Database": "DAST",
+    "DboLevelDatabaseAccount": {
+      "Username": "username",
+      "Password": "password",
+      "UseWindowsAuthentication": false,
+      "AdditionalConnectionProperties": null
+    },
+    "StandardDatabaseAccount": {
+      "Username": "username",
+      "Password": "password",
+      "CreateLogin": false,
+      "AdditionalConnectionProperties": null
+    }
+  },
+  "RetainCompletedScans": false,
+  "DisableAdvancedScanPrioritization": false,
+  "EnableRestrictedScanSettings": false,
+  "ServiceToken": "minimum_10_characters",
+  "SmartUpdateSettings": {
+    "SmartUpdateUrl": "https://smartupdate.fortify.microfocus.com/",
+    "LicensingUrl": "https://licenseservice.fortify.microfocus.com/"
+  },
+  "SSCSettings": {
+    "SSCRootUrl": "http://ssc-instance:8080/ssc",
+    "ServiceAccountUserName": "username",
+    "ServiceAccountPassword": "password"
+  },
+  "DASTApiSettings": {
+    "RootUrl": "http://dast-api:64814",
+    "DisableCorsOrigins": false,
+    "CorsOrigins": [
+      "http://ssc-instance:8080",
+      "http://dast-api:64814"
+    ]
+  },
+  "LIMSettings": {
+    "LimUrl": "https://lim-server-instance/LIM.API",
+    "ServiceAccountUserName": "username",
+    "ServiceAccountPassword": "password",
+    "DefaultLimPoolName": "username",
+    "DefaultLimPoolPassword": "password",
+    "UseLimRestApi": true
+  },
+  "UtilityWorkerServiceSettings": {
+    "RootUrl": "http://dast-utility-service:5000"
+  },
+  "DastApiSSLSettings": {
+    "SSLPreferenceType": "UseExistingCertificate",
+    "GenerateCertificateModel": {
+      "CertificateDirectory": "c:\\directory_where_certificate_is_saved",
+      "Host": "dast-api",
+      "Password": "password",
+      "Validity": 1000,
+      "Location": "Alpharetta",
+      "Email": "email@domain.com"
+    },
+    "ExistingCertificateModel": {
+      "CertificateFullPath": "c:\\path_to_cert\\dast_api.cert",
+      "Password": "password"
+    }
+  },
+  "UtilityWorkerServiceSSLSettings": {
+    "SSLPreferenceType": "UseExistingCertificate",
+    "GenerateCertificateModel": {
+      "CertificateDirectory": "c:\\directory_where_certificate_is_saved",
+      "Host": "dast-utility-service",
+      "Password": "password",
+      "Validity": 1000,
+      "Location": "Alpharetta",
+      "Email": "email@domain.com"
+    },
+    "ExistingCertificateModel": {
+      "CertificateFullPath": "c:\\path_to_cert\\dast_utility_service.cert",
+      "Password": "password"
+    }
+  },
+  "EnvironmentSettings": {
+    "AllowNonTrustedServerCertificate": true,
+    "ProxySettings": {
+      "UseProxy": true,
+      "ProxyAddress": "http://proxy-instance.com:8080",
+      "ProxyPassword": "password",
+      "ProxyUserName": "username",
+      "ProxyBypassList": "dast-api,dast-utility-service,lim-server-instance,ssc-instance"
+    }
+  },
+  "ApplySecureBase": true,
+  "SecureBasePath": "c:\\path_to_securebase_data\\DefaultData.zip",
+  "DebrickedSettings": {
+    "AccessToken": ""
+  }
+}
